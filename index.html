@@ -1408,7 +1408,7 @@ a.btn{display:block;text-align:center;text-decoration:none}
     $("#done-detail").innerHTML =
       '<b>'+esc(t("t_event"))+':</b> '+esc(t("t_event_v"))+'<br>'+
       '<b>'+esc(t("t_when"))+':</b> '+esc(t("t_when_v"))+'<br>'+
-      '<b>'+esc(t("t_where"))+':</b> '+t("t_where_v").split(" · ").map(function(x,i){ return i ? esc(x).replace(/ /g,"&nbsp;") : esc(x); }).join("<br>")+'<br>'+
+      '<b>'+esc(t("t_where"))+':</b> '+t("t_where_v").split(" · ").map(function(x,i){ return i ? esc(x).replace(/ /g,"&nbsp;") : esc(x); }).reduce(function(acc,x,i){ return i===0 ? x : acc + (i===1 ? "<br>" : " · ") + x; }, "")+'<br>'+
       '<b>'+esc(t("t_name"))+':</b> '+esc(guest.name)+' · '+esc(guest.email)+
       (inviter ? '<br><b>'+esc(t("t_inv"))+':</b> '+esc(inviter) : '');
 
