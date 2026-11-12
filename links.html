@@ -61,7 +61,7 @@ input:focus{border-color:#ff5864}
   var copy = document.getElementById("copy"), wa = document.getElementById("wa"), lang = "en";
   var MSG = {
     es: function(n, u){ return "¡Hola! Te invito a la premiere de SWIPE RIGHT, la primera serie vertical proyectada en una sala de cine.\nDomingo 13 de diciembre · 7:00 p. m. · Paragon Theaters, Fort Lauderdale (9200 W. State Rd. 84, Davie, FL).\nConfirma aquí: " + u; },
-    en: function(n, u){ return "Hi! You're invited to the SWIPE RIGHT premiere, the first-ever vertical series screened in a movie theater!\nSunday, December 13 · 7:00 PM · Paragon Theaters, Fort Lauderdale (9200 W. State Rd. 84, Davie, FL).\nRSVP here: " + u; }
+    en: function(n, u){ return "Hi! You're invited to the SWIPE RIGHT premiere, the first-ever vertical series screened in a movie theater!\nParagon Theaters - Fort Lauderdale\n9200 W. State Rd. 84\nDavie, FL, 33324\nSunday December 13th, 2026 · 7:00pm\nRSVP here: " + u; }
   };
   function link(){ var n = name.value.replace(/\s+/g," ").trim(); return n ? base + "?de=" + encodeURIComponent(n) : ""; }
   function update(){
